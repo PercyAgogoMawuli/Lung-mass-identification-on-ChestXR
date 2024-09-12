@@ -44,7 +44,7 @@ The dataset is assumed to consist of medical images, with associated labels stor
 
 The **InceptionV3** model, pre-trained on ImageNet, is used for transfer learning. The top layers are removed, and new dense layers are added to adapt the model for binary classification.
 
-```python
+
 pre_trained_model = InceptionV3(input_shape=(256, 256, 3), weights='imagenet', include_top=False)
 
 # Adding new layers
@@ -64,23 +64,23 @@ Shifts in width and height
 Zooming
 Shearing
 
-#Training Process
+# Training Process
 The model is trained using the augmented data for 20 epochs. Performance is evaluated on the test set.
 
-##Evaluation
+## Evaluation
 The model's performance is assessed using metrics such as accuracy, loss, and the ROC curve. Plots are generated to visualize the following:
 
 Training vs. Validation Accuracy and Loss.
 Confidence histograms of predictions for positive and negative classes.
 ROC Curve to evaluate model performance in terms of sensitivity and specificity.
 
-##Installation
+## Installation
 To get started, clone the repository and install the necessary dependencies:
 git clone https://github.com/adleberg/medical-ai
 cd medical-ai
 pip install -r requirements.txt
 
-#Requirements
+# Requirements
 tensorflow
 keras
 scikit-learn
@@ -89,11 +89,11 @@ numpy
 matplotlib
 Pillow
 
-##Usage
+## Usage
 Predicting New Images
 You can use the predict_image function to classify new images. The model expects images to be resized to 256x256 pixels.
 
-##Results Visualization
+## Results Visualization
 After training, the following visualizations are available:
 
 Example Images: Positive and negative examples from the dataset are displayed.
@@ -102,4 +102,4 @@ ROC Curve: Visualization of the model's true positive rate (sensitivity) against
 
 
 
-** THANK YOU FOR VISITING MY PROJECT **
+**THANK YOU FOR VISITING MY PROJECT**
