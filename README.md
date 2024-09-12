@@ -4,6 +4,13 @@
 
 This repository contains a project focused on detecting a specific finding, such as a mass in medical images, using a pre-trained deep learning model. The project leverages the **InceptionV3** architecture, with transfer learning, to classify medical images as positive or negative for a given medical condition (e.g., a mass).
 
+![ACCUR](https://github.com/user-attachments/assets/70edac26-9330-49e5-8730-b857fb5ddd40) 
+![LOSS](https://github.com/user-attachments/assets/1248b9f3-a25d-419b-bc7e-e2382892e968)
+
+![roc](https://github.com/user-attachments/assets/2f99896e-c76a-422d-979e-0b76b80485fb)
+
+![conf_cut_off](https://github.com/user-attachments/assets/7163a7c8-7810-4c90-8efa-eabdd5ea74b0)
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -60,14 +67,14 @@ Shearing
 #Training Process
 The model is trained using the augmented data for 20 epochs. Performance is evaluated on the test set.
 
-#Evaluation
+##Evaluation
 The model's performance is assessed using metrics such as accuracy, loss, and the ROC curve. Plots are generated to visualize the following:
 
 Training vs. Validation Accuracy and Loss.
 Confidence histograms of predictions for positive and negative classes.
 ROC Curve to evaluate model performance in terms of sensitivity and specificity.
 
-#Installation
+##Installation
 To get started, clone the repository and install the necessary dependencies:
 git clone https://github.com/adleberg/medical-ai
 cd medical-ai
@@ -82,23 +89,17 @@ numpy
 matplotlib
 Pillow
 
-#Usage
+##Usage
 Predicting New Images
 You can use the predict_image function to classify new images. The model expects images to be resized to 256x256 pixels.
 
-#Results Visualization
+##Results Visualization
 After training, the following visualizations are available:
 
 Example Images: Positive and negative examples from the dataset are displayed.
 Accuracy and Loss Plots: Training and validation accuracy/loss over epochs.
 ROC Curve: Visualization of the model's true positive rate (sensitivity) against the false positive rate (1-specificity).
 
-![ACCUR](https://github.com/user-attachments/assets/70edac26-9330-49e5-8730-b857fb5ddd40)
 
-![LOSS](https://github.com/user-attachments/assets/1248b9f3-a25d-419b-bc7e-e2382892e968)
-
-![roc](https://github.com/user-attachments/assets/2f99896e-c76a-422d-979e-0b76b80485fb)
-
-![conf_cut_off](https://github.com/user-attachments/assets/7163a7c8-7810-4c90-8efa-eabdd5ea74b0)
 
 ** THANK YOU FOR VISITING MY PROJECT **
