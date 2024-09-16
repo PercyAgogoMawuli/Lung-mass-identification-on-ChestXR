@@ -50,8 +50,11 @@ pre_trained_model = InceptionV3(input_shape=(256, 256, 3), weights='imagenet', i
 **Adding new layers**
 
 x = layers.Flatten()(last_output)
+
 x = layers.Dense(1024, activation='relu')(x)
+
 x = layers.Dropout(0.2)(x)
+
 x = layers.Dense(1, activation='sigmoid')(x)
 
 **Compile the model**
@@ -63,8 +66,11 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc'])
 Data augmentation techniques are applied to the training images to improve model generalization. These include:
 
 Rotation
+
 Shifts in width and height
+
 Zooming
+
 Shearing
 
 **Training Process**
@@ -75,24 +81,35 @@ The model is trained using the augmented data for 20 epochs. Performance is eval
 The model's performance is assessed using metrics such as accuracy, loss, and the ROC curve. Plots are generated to visualize the following:
 
 Training vs. Validation Accuracy and Loss.
+
 Confidence histograms of predictions for positive and negative classes.
+
 ROC Curve to evaluate model performance in terms of sensitivity and specificity.
 
 ## Installation
 
 To get started, clone the repository and install the necessary dependencies:
+
 git clone https://github.com/adleberg/medical-ai
+
 cd medical-ai
+
 pip install -r requirements.txt
 
 **Requirements**
 
 tensorflow
+
 keras
+
 scikit-learn
+
 pandas
+
 numpy
+
 matplotlib
+
 Pillow
 
 ## Usage
@@ -105,7 +122,9 @@ You can use the predict_image function to classify new images. The model expects
 After training, the following visualizations are available:
 
 Example Images: Positive and negative examples from the dataset are displayed.
+
 Accuracy and Loss Plots: Training and validation accuracy/loss over epochs.
+
 ROC Curve: Visualization of the model's true positive rate (sensitivity) against the false positive rate (1-specificity).
 
 
